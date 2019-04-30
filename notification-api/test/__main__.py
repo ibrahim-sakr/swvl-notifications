@@ -18,6 +18,7 @@ class MyTest(TestCase):
     user = ''
 
     def create_app(self):
+        app.config['DEBUG'] = False
         return app
 
     def test_app_working(self):
