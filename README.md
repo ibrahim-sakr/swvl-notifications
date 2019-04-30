@@ -16,6 +16,22 @@ just clone the repo then run `docker-compose up`
 
 ## Run Tests
 
+notification-api
+
+make sure you have puthon 2.7 installed
+
+run `pip install -r requirements.txt`
+
+then run `pytest`
+
+notification-cli
+
+make sure you have nodejs installed
+
+run `npm install`
+
+then run `npm test`
+
 ## Usage
 
 after the docker compose starts make sure you see on the console
