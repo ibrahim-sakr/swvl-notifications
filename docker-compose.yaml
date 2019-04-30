@@ -1,0 +1,19 @@
+version: '3.5'
+services:
+  mongo:
+    image: "mongo:4.0"
+
+  rabbitmq:
+    image: "rabbitmq:3.7"
+
+  api:
+    build: "./notification-api"
+    ports:
+     - "4000:4000"
+    depends_on:
+      - rabbitmq
+
+  cli:
+    build: "./notification-cli"
+    depends_on:
+      - rabbitmq
