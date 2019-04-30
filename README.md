@@ -20,13 +20,17 @@ notification-api
 
 make sure you have puthon 2.7 installed
 
+modify the .env file
+
 run `pip install -r requirements.txt`
 
-then run `pytest`
+then run `python test`
 
 notification-cli
 
 make sure you have nodejs installed
+
+modify the .env file
 
 run `npm install`
 

@@ -1,14 +1,9 @@
 import os
 from flask import request, jsonify, g
 from app import app, mongo
-import logger
 import datetime
 from flask_expects_json import expects_json
 import pika
-
-ROOT_PATH = os.environ.get('ROOT_PATH')
-LOG = logger.get_root_logger(
-    __name__, filename=os.path.join(ROOT_PATH, 'output.log'))
 
 notification_schema = {
     'type': 'object',
@@ -22,6 +17,13 @@ notification_schema = {
     },
     'required': ['kind', 'providers', 'title', 'body', 'consumers']
 }
+
+if app.config['DEBUG'] == True:
+    RABBITMQ_HOST = 'rabbitmq'
+    RABBITMQ_HOST = 'notificationQueue'
+else:
+    RABBITMQ_HOST = os.getenv("RABBITMQ_HOST")
+    RABBITMQ_HOST = os.getenv("RABBITMQ_QUEUE")
 
 @app.route('/notifications', methods=['GET'])
 def notificationsIndex():
