@@ -2,12 +2,12 @@
 swvl task for tech lead position
 
 ## contents
-- installation
-- run tests
-- usage
-- available APIs
-- full scenario
-- technical explanation
+- [installation](#installation)
+- [run tests](#run-tests)
+- [usage](#usage)
+- [available APIs](#available-apis)
+- [full scenario](#full-scenario)
+- [technical explanation](#technical-explanation)
 
 ## Installation
 for the services to run smothly together,
@@ -15,6 +15,22 @@ for the services to run smothly together,
 just clone the repo then run `docker-compose up`
 
 ## Run Tests
+
+notification-api
+
+make sure you have puthon 2.7 installed
+
+run `pip install -r requirements.txt`
+
+then run `pytest`
+
+notification-cli
+
+make sure you have nodejs installed
+
+run `npm install`
+
+then run `npm test`
 
 ## Usage
 
@@ -85,7 +101,7 @@ after the notification send you can see it in the console it will log everything
 
 take a look on this flow chart
 
-[[https://github.com/ibrahim-sakr/swvl-notifications/blob/master/assets/swvl_notification.png|alt=swvl_notifications]]
+![swvl_notifications](https://github.com/ibrahim-sakr/swvl-notifications/blob/master/assets/swvl_notification.png "swvl notification flowchart")
 
 the code executes as folow
 
@@ -99,6 +115,8 @@ the code executes as folow
     - then into the MessageTypeClass we set the message
     - load all message providers
     - publish to them the message
+    - every Provider split the consumer array into chunks based on (max-per-time) config
+    - send the notification
 
 notification Schema
 - _id
