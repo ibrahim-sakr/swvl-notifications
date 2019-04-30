@@ -2,12 +2,12 @@
 swvl task for tech lead position
 
 ## contents
-- installation
-- run tests
-- usage
-- available APIs
-- full scenario
-- technical explanation
+- [installation](#installation)
+- [run tests](#run-tests)
+- [usage](#usage)
+- [available APIs](#available-apis)
+- [full scenario](#full-scenario)
+- [technical explanation](#technical-explanation)
 
 ## Installation
 for the services to run smothly together,
@@ -85,7 +85,7 @@ after the notification send you can see it in the console it will log everything
 
 take a look on this flow chart
 
-[[https://github.com/ibrahim-sakr/swvl-notifications/blob/master/assets/swvl_notification.png|alt=swvl_notifications]]
+![swvl_notifications](https://github.com/ibrahim-sakr/swvl-notifications/blob/master/assets/swvl_notification.png "swvl notification flowchart")
 
 the code executes as folow
 
