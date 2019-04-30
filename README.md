@@ -99,6 +99,8 @@ the code executes as folow
     - then into the MessageTypeClass we set the message
     - load all message providers
     - publish to them the message
+    - every Provider split the consumer array into chunks based on (max-per-time) config
+    - send the notification
 
 notification Schema
 - _id
